@@ -1,0 +1,42 @@
+{
+  "name": "hotspot-bypass",
+  "version": "1.0.0",
+  "description": "An application to test your personal hotspot authentication.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capevace/hotspot-bypass.git"
+  },
+  "keywords": [
+    "hack",
+    "free",
+    "hotspot",
+    "bypass",
+    "wifi",
+    "wi-fi",
+    "internet",
+    "crack",
+    "pass"
+  ],
+  "author": "Lukas von Mateffy (@Capevace)",
+  "license": "MIT",
+  "homepage": "https://github.com/capevace/hotspot-bypass",
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "electron-prebuilt": "^1.2.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2"
+  },
+  "dependencies": {
+    "bulma": "^0.1.2",
+    "is-online": "^5.1.2",
+    "sudo-prompt": "^6.1.0",
+    "xregexp": "^3.1.1"
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bulma.css">
+</head>
+<body>
+  <div class="state-box" style="-webkit-app-region: drag" id="connection-state">
+    HotspotBypass &nbsp; - &nbsp; <span class="state">No Internet Connection</span>
+  </div>
+
+  <section class="section main">
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-12">
+          <article class="tile is-child notification">
+            <p class="subtitle">Current MAC-Address: <code id="current-mac-address">ff:ff:ff:ff:ff:ff</code></p>
+          </article>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-6">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+
+            <article class="tile is-child notification">
+              <p class="title">Manual Change</p>
+              <p class="subtitle">Set a custom address.</p>
+              <div class="content">
+                <label class="label" for="custom-mac">MAC-Address</label>
+                <p class="control">
+                  <input class="input" id="custom-mac-address" type="text" placeholder="ff:ff:ff:ff:ff:ff">
+                </p>
+                <p class="control">
+                  <button class="button" id="custom-mac-submit">Set Address</button>
+                </p>
+              </div>
+            </article>
+
+            <article class="tile is-child notification">
+              <p class="title">Timed Change</p>
+              <p class="subtitle">Repeatedly set addresses.</p>
+              <div class="content">
+                <label class="label" for="timeout">Timeout between changes</label>
+                <p class="control has-icon has-icon-right">
+                  <input class="input" id="timed-change-time" type="number" value="15" placeholder="The time in between the address changes.">
+                  <i class="fa">Min</i>
+                </p>
+                <p class="control ">
+                  <button class="button" id="timed-change-submit">Start Cycle</button>
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tile is-vertical is-6">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification">
+              <a class="button is-small is-pulled-right" id="mac-address-table-refresh">Refresh</a>
+
+              <p class="title">Addresses in Network</p>
+              <p class="subtitle">MAC-Addresses of devices in your network.</p>
+
+              <div class="bar" id="mac-address-table-progress-bar">
+                <p class="progress-task">Preparing...</p>
+                <progress class="progress progress-bar" value="10" max="100"></progress>
+              </div>
+
+              <table class="table is-bordered is-striped is-narrow" id="mac-address-table" style="display: none;">
+                <thead>
+                  <tr>
+                    <th>Device Name</th>
+                    <th>Address</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script>
+// You can also require other files to run in this process
+require('../src/app.js');
+</script>
+</html>
